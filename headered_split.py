@@ -22,7 +22,7 @@ def main(infile, prefix, suffix, lines):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Split a file with #-prefixed headers.')
-    parser.add_argument('infile', nargs='*', type=argparse.FileType('r'), default=sys.stdin, help='input file. default: stdin')
+    parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), default=sys.stdin, help='input file. default: stdin')
     parser.add_argument('--lines', type=int, default=10000, help='number of data lines per file')
     parser.add_argument('--prefix', type=str, default='', help='prefix to add to output file names')
     parser.add_argument('--suffix', type=str, default='', help='suffix to add to output file names')
